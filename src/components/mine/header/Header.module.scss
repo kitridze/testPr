@@ -1,0 +1,77 @@
+.wrapper{
+    p{
+        background: none;
+        color: hsl(0, 0, 100);
+    }
+    .container{
+        margin: 0 auto;
+        max-width: 1600px;
+        height: 126px;      
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left{
+            color: hsl(43, 100, 62);
+            font-family: var(--font-goldman);
+            font-size: 50px;
+        }
+        .right{
+            width: 674px;
+            height: 66px;
+            border-radius: 100px;
+            border: 3px solid hsl(0, 0, 100);
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            font-weight: 500;
+            
+            li{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                
+                transition: all ease-in-out;
+                transition-duration: 0.3s;
+                p{
+                    background-color: none;
+                    padding: 0 20px;
+                    border-right: 2px solid hsl(0, 0, 10);
+
+                    transition: all ease-in-out;
+                    transition-duration: 0.3s;
+                }
+            }
+            li.first{
+                padding-left: 20px;
+                border-radius: 100px 0 0 100px;
+                p{
+                    background-color: none;
+                }
+            }
+            
+            li.last{
+                padding-right: 20px;
+                border-radius: 0 100px 100px 0;
+
+                p{
+                    background-color: none;
+                    border-right: none;
+                }
+            }
+            li:hover{
+                background-color: hsl(0, 0, 100);
+                p{
+                    background: none;
+                    color: hsl(0, 0, 0);
+                    border-right: 2px solid hsl(0, 0, 100);
+                }
+            }
+            li.last:hover{
+                p{
+                    border-right: none;
+                }
+            }
+            
+        }
+    }
+}

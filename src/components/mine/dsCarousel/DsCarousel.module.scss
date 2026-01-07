@@ -1,0 +1,209 @@
+// components/Carousel.module.scss
+
+.carouselContainer {
+  position: relative;
+  width: 452px;
+  overflow: hidden;
+  border-radius: 24px;
+  
+  &:hover {
+    .carouselArrow {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+  }
+}
+
+.carouselWrapper {
+  position: relative;
+  height: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.carouselSlide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
+
+// Navigation Arrows
+.carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  
+  &:hover {
+    background: white;
+    transform: translateY(-50%) scale(1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  &:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  
+  svg {
+    color: #333;
+    width: 20px;
+    height: 20px;
+  }
+  
+  &.arrowPrev {
+    left: 20px;
+  }
+  
+  &.arrowNext {
+    right: 20px;
+  }
+}
+
+// Pagination
+.pagination {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 12;
+}
+
+.paginationDot {
+  width: 78px;
+  height: 3px;
+  border-radius: 100px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+  }
+  
+  &.active {
+    background: white;
+  }
+  
+  &:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselSlide {
+    min-height: 300px;
+  }
+  
+  .carouselArrow {
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    
+    &.arrowPrev {
+      left: 10px;
+    }
+    
+    &.arrowNext {
+      right: 10px;
+    }
+  }
+  
+  .pagination {
+    bottom: 16px;
+  }
+  
+  .slideCounter {
+    bottom: 16px;
+    right: 16px;
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselSlide {
+    min-height: 250px;
+  }
+  
+  .carouselArrow {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+// Touch Device Support
+.touchDevice {
+  .carouselArrow {
+    opacity: 0.7;
+  }
+}
+
+// Animation Classes
+.slideEnter {
+  opacity: 0;
+}
+
+.slideEnterActive {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.slideExit {
+  opacity: 1;
+}
+
+.slideExitActive {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+// Dark Mode Support
+@media (prefers-color-scheme: dark) {
+  .carouselArrow {
+    background: rgba(0, 0, 0, 0.7);
+    
+    svg {
+      color: white;
+    }
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
+  
+  .slideCounter {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}

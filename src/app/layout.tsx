@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Goldman, Poppins} from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
+import Header from "@/components/mine/header/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const goldman = Goldman({
+  variable: "--font-goldman",
+  weight:['400', '700']
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight:['400', '500', '600']
 });
+
+const clashDisplay = localFont({
+  src:'../../public/clash-display/ClashDisplay-Medium.otf',
+  variable:"--font-clashDisplay",
+  weight:'500'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${goldman.variable} ${poppins.variable} ${clashDisplay.variable} antialiased`}
       >
+        <Header/>
         {children}
       </body>
     </html>
