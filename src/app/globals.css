@@ -10,7 +10,6 @@
 body{
   background-color: hsl(0, 0, 3);
 }
-
 :root {
   --color-orange: hsl(36, 96, 65);
   --color-orangeDark: hsl(22, 96, 65);

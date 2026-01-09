@@ -1,16 +1,19 @@
 .wrapper{
     text-align: center;
-    font-family: var(--font-clashDisplay);
-    font-weight: 500;
     padding-bottom: 120px;
     .up{
+        font-family: var(--font-clashDisplay);
+        font-weight: 500;
         color: var(--color-white);
         font-size: 120px;
+
         span{
             color: var(--color-purple);
         }
     }
     .down{
+        font-family: var(--font-clashDisplay);
+        font-weight: 500;
         color: var(--color-yellow);
         font-size: 60px;
     }

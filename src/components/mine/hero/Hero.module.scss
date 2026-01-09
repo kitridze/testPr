@@ -1,5 +1,11 @@
 .wrapper{
     padding: 174px;
+    background:
+        linear-gradient( 180deg, hsla(0, 0, 100, 0.0), hsla(0, 0, 3, 1)),
+        url('/imgs/Hero.png')
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
     .container{
         max-width: 1600px;
         margin: 0 auto;

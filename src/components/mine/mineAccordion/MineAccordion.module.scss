@@ -1,8 +1,10 @@
 .accordion {
-  margin: 2rem auto;
+  margin: 0 auto;
   border-radius: 8px;
 
   .item {
+    max-width: 1140px;
+    margin-bottom: 20px;
     border-radius: 30px;
     padding: 20px;
     background-color: hsl(0, 0, 5);
@@ -38,6 +40,7 @@
   }
 
   .content {
+    font-size: 26px;
     padding-top: 20px;
     display: grid;
     grid-template-rows: 0fr; // Hidden state
