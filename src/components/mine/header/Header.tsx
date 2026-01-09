@@ -13,16 +13,19 @@ export default function Header() {
             <ul className={styles.right}>
                 <li className={styles.first}>
                     <p>Overview</p>
+                    <span/>
                 </li>
                 <li>
                     <p>
                         Design
                     </p>
+                    <span/>
                 </li>
                 <li>
                     <p>
                         Development
                     </p>
+                    <span/>
                 </li>
                 <li className={styles.last}>
                     <p>

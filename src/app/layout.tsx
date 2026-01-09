@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Goldman, Poppins} from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
 import Header from "@/components/mine/header/Header";
+import Footer from "@/components/mine/footer/Footer";
 
 const goldman = Goldman({
   variable: "--font-goldman",
@@ -36,7 +37,8 @@ export default function RootLayout({
         className={`${goldman.variable} ${poppins.variable} ${clashDisplay.variable} antialiased`}
       >
         <Header/>
-        {children}
+          {children}
+        <Footer/>
       </body>
     </html>
   );

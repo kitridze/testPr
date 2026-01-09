@@ -1,9 +1,69 @@
 .wrapper{
-    padding: 42px;
+    padding: 174px;
     .container{
         max-width: 1600px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: space-between;
+        .left{
+            h1{
+                font-weight: 500;
+                font-size: 160;
+                font-family: var(--font-clashDisplay);
+                color: var(--color-white);
+            }
+            .cont{
+                margin-top: 36px;
+                .text{
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 808px;
+                    > img{
+                        margin-right: 28px;
+                    }
+                    .hollow{
+                        p{
+                            color: hsl(0, 0, 55);
+                            line-height: 150%;
+                            font-weight: 500;
+                            font-size: 28px;
+                            max-width: 748px;
+                        }
+                        .svgs{
+                            display: flex;
+                            img{
+                                margin-left: 12px;
+                            }
+                        }
+                        button{
+                            margin-top: 34px;
+                            color: hsla(0, 0, 100, 0.2);
+                            line-height: 150%;
+                            font-weight: 500;
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            > button{
+                cursor: pointer;
+                margin-top: 36px;
+                width: 452px;
+                height: 82px;
+                padding: 28px;
+                background-color: hsl(43, 100, 73);
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                border-radius: 100px;
+                p{  
+                    font-weight: 500;
+                    font-size: 22px;
+                }
+            }
+            
+        }
     }
 }

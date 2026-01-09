@@ -1,0 +1,11 @@
+.wrapper{
+    background-color: hsl(0, 0, 6);
+    .cont{
+        max-width: 1600px;
+        margin: 0 auto;
+        .left{
+            color: var(--color-orange);
+            font-family: var(--font-goldman);
+        }
+    }
+}

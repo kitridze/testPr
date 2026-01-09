@@ -1,7 +1,12 @@
 .wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 25;
     p{
         background: none;
-        color: hsl(0, 0, 100);
+        color: var(--color-white);
     }
     .container{
         margin: 0 auto;
@@ -11,7 +16,7 @@
         align-items: center;
         justify-content: space-between;
         .left{
-            color: hsl(43, 100, 62);
+            color: var(--color-yellow);
             font-family: var(--font-goldman);
             font-size: 50px;
         }
@@ -19,12 +24,18 @@
             width: 674px;
             height: 66px;
             border-radius: 100px;
-            border: 3px solid hsl(0, 0, 100);
+            border: 3px solid var(--color-white);
             display: flex;
             justify-content: space-between;
+            // align-items: center;
             font-size: 22px;
             font-weight: 500;
             
+            span{
+                height: 12px;
+                width: 2px;
+                background-color: var(--color-background);
+            }
             li{
                 display: flex;
                 align-items: center;
@@ -35,7 +46,6 @@
                 p{
                     background-color: none;
                     padding: 0 20px;
-                    border-right: 2px solid hsl(0, 0, 10);
 
                     transition: all ease-in-out;
                     transition-duration: 0.3s;
@@ -59,11 +69,10 @@
                 }
             }
             li:hover{
-                background-color: hsl(0, 0, 100);
+                background-color: var(--color-white);
                 p{
                     background: none;
-                    color: hsl(0, 0, 0);
-                    border-right: 2px solid hsl(0, 0, 100);
+                    color: var(--color-black);
                 }
             }
             li.last:hover{
